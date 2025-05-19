@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership Confirmation</title>
+  <link rel="stylesheet" href="membership.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="membership-page">
+  <div class="membership-hero">
+    <div class="hero-content">
+      <h1>Thank You!</h1>
+      <p id="confirmation-message">Processing your membership...</p>
+      <a href="index.html" class="select-row button">Return to Home</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const name = localStorage.getItem("memberName") || "Member";
+      const plan = localStorage.getItem("memberPlan") || "a plan";
+      document.getElementById("confirmation-message").textContent =
+        `Thanks, ${name}! You’ve successfully signed up for the ${plan} membership.`;
+    });
+  </script>
+</body>
+</html>

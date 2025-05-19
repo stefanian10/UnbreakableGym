@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Options - Unbreakable Gym</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="membership.css"/>
+    <script src="membership.js"></script>
+     </head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Unbreakable</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li class="membership-link"><a href="membership.html">Join Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="membership-page">
+        <section class="membership-hero">
+            <div class="hero-content">
+                <h1>Unlock Unlimited Access</h1>
+                <p>Choose the membership that fits your goals and join our vibrant fitness community.</p>
+            </div>
+        </section>
+
+        <section class="membership-options">
+            <h2>Our Membership Plans</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Basic</th>
+                            <th class="popular-column">Pro <span class="popular-badge">Popular</span></th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Price</th>
+                            <td>$49/month</td>
+                            <td class="popular-column">$79/month</td>
+                            <td>$99/month</td>
+                        </tr>
+                        <tr>
+                            <th>Gym Floor Access</th>
+                            <td><img src="check.avif" alt="Check"></td>
+                            <td class="popular-column"><img src="check.avif" alt="Check"></td>
+                            <td><img src="check.avif" alt="Check"></td>
+                        </tr>
+                        <tr>
+                            <th>Standard Equipment</th>
+                            <td><img src="check.avif" alt="Check"></td>
+                            <td class="popular-column"><img src="check.avif" alt="Check"></td>
+                            <td><img src="check.avif" alt="Check"></td>
+                        </tr>
+                        <tr>
+                            <th>Premium Equipment</th>
+                            <td><img src="cross.jpg" alt="Cross"></td>
+                            <td class="popular-column"><img src="check.avif" alt="Check"></td>
+                            <td><img src="check.avif" alt="Check"></td>
+                        </tr>
+                        <tr>
+                            <th>Group Classes</th>
+                            <td><img src="cross.jpg" alt="Cross"></td>
+                            <td class="popular-column"><img src="check.avif" alt="Check"> Unlimited</td>
+                            <td><img src="check.avif" alt="Check"> Unlimited</td>
+                        </tr>
+                        <tr>
+                            <th>Personal Training Discounts</th>
+                            <td><img src="cross.jpg" alt="Cross"></td>
+                            <td class="popular-column"><img src="check.avif" alt="Check"></td>
+                            <td><img src="check.avif" alt="Check"></td>
+                        </tr>
+                        <tr>
+                            <th>Priority Booking</th>
+                            <td><img src="cross.jpg" alt="Cross"></td>
+                            <td class="popular-column"><img src="cross.jpg" alt="Cross"></td>
+                            <td><img src="check.avif" alt="Check"></td>
+                        </tr>
+                        <tr>
+                            <th>Guest Passes (per month)</th>
+                            <td>0</td>
+                            <td class="popular-column">0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="select-row">
+                            <th></th>
+                            <td><button class="button select-plan-button" data-plan="Basic">Select Basic</button></td>
+                            <td class="popular-column"><button class="button select-plan-button" data-plan="Pro">Select Pro</button></td>
+                            <td><button class="button select-plan-button" data-plan="Premium">Select Premium</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="membership-form-container">
+                <h2>Become a Member</h2>
+                <form id="membership-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="membership-type">Membership Type:</label>
+                        <input type="text" id="membership-type" name="membership-type" value="" readonly>
+                        <p class="selected-plan-info">No plan selected yet.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" data-payment="credit-card">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" data-payment="credit-card">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" data-payment="credit-card">
+                    </div>
+                    <div class="form-group paypal-info">
+                        <p>You will be redirected to PayPal to complete your payment.</p>
+                    </div>
+                    <button type="submit" class="button">Complete Enrollment</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="membership-benefits">
+            <h2>Why Become a Member?</h2>
+            <p class="benefits-paragraph">
+                Unlock your full potential and achieve your fitness goals with Unbreakable Gym. Our expert trainers provide guidance and support every step of the way. Join a welcoming and motivating community of individuals dedicated to a healthier lifestyle. We offer flexible membership options to fit your unique needs and budget, with no long-term commitments required. Experience the difference a supportive and well-equipped gym can make in your fitness journey.
+            </p>
+        </section>
+
+        
+    </main>
+
+      <footer>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+                <li>Contact Us</li>
+            </ul>
+            <p>&copy; 2025 Unbreakable Gym. All rights reserved.</p>
+        
+    </footer>
+
+</body>
+</html>
